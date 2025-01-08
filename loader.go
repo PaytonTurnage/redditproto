@@ -1,19 +1,18 @@
 package redditproto
 
 import (
-	"bytes"
-	"io/ioutil"
+	"os"
 
-	"github.com/golang/protobuf/proto"
+	"google.golang.org/protobuf/encoding/prototext"
 )
 
 // Load reads a user agent from a protobuffer file and returns it.
 func Load(filename string) (*UserAgent, error) {
-	buf, err := ioutil.ReadFile(filename)
+	buf, err := os.ReadFile(filename)
 	if err != nil {
 		return nil, err
 	}
 
 	agent := &UserAgent{}
-	return agent, proto.UnmarshalText(bytes.NewBuffer(buf).String(), agent)
+	return agent, prototext.Unmarshal(buf, agent)
 }
