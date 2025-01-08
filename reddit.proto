@@ -9,7 +9,7 @@
 syntax = "proto3";
 package redditproto;
 
-option go_package = "github.com/fmiskovic/redditproto";
+option go_package = "github.com/turnage/redditproto";
 
 // Data type t1_
 message Comment {

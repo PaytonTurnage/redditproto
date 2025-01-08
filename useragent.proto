@@ -1,7 +1,7 @@
 syntax = "proto3";
 package redditproto;
 
-option go_package = "github.com/fmiskovic/redditproto";
+option go_package = "github.com/turnage/redditproto";
 
 // UserAgent describes a non-user entity controlling a reddit account. This
 // information is REQUIRED according the reddit api rules.

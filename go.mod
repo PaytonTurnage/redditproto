@@ -1,4 +1,4 @@
-module github.com/fmiskovic/redditproto
+module github.com/turnage/redditproto
 
 go 1.23.4
 
